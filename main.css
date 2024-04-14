@@ -25,9 +25,12 @@ body {
   top: 0px;
   position: fixed;
   height: 100vh;
-  border-radius: 0px 50px 50px 0px;
-  transform: scale(0.95);
+  max-width: 700px;
 } 
+.m1pic {
+  display: none;
+  border-radius: 0px 30px;
+}
 
 
 .main_container {
@@ -66,7 +69,6 @@ h1.prof {
   color: var(--secondary);
   font-family: var(--font);
   font-weight: 600;
-  margin-top: 40px;
   background-color: var(--secondary);
   color: var(--primary);
   font-size: 20px;
@@ -87,6 +89,54 @@ h1.prof {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 600px) {
+  .main_container {
+    padding: 0 10px;
+    left: 0;
+  }
+  .m1pic {
+    display: block;
+    width: 50vw;
+  }
+  .mpic {
+    display: none;
+  }
+  h1.name {
+    font-size: 30px;
+  }
+
+  h1.prof {
+    font-size: 20px;
+  }
+
+  .resumeDownload {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .mpic {
+    display: none;
+  }
+  .main_container {
+    padding: 0 20px;
+    left: 0;
+  }
+
+  h1.name {
+    font-size: 35px;
+  }
+
+  h1.prof {
+    font-size: 22px;
+  }
+
+  .resumeDownload {
+    font-size: 18px;
+    padding: 18px;
+  }
+}
+
 /* Make it that when they click it opens the pictures */
 h1.myPics {
   font-family: var(--font);
@@ -97,65 +147,5 @@ h1.myPics {
   margin-top: 30px;
 }
 
-.pictures {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(20, 5vw);
-  grid-gap: 15px;
-  width: 1200px;
-  background-color: rgba(224, 211, 211, 0.1);
-  padding: 10px;
-}
-.allpictures {
-  width: 100%;
-  height: 100%;
-}
-.allpictures:nth-child(1) {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  object-fit: cover;
-}
-.allpictures:nth-child(2) {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 8;
-  object-fit: fill;
-}
-.allpictures:nth-child(3) {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 8;
-  grid-row-end: 12;
-  object-fit: cover;
-}
-.allpictures:nth-child(4) {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 12;
-  object-fit: cover;
-}
-.allpictures:nth-child(5) {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 12;
-  grid-row-end: 18;
-  object-fit: cover;
-}
-.allpictures:nth-child(6) {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 12;
-  grid-row-end: 15;
-  object-fit: cover;
-}
-.allpictures:nth-child(7) {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 15;
-  grid-row-end: 18;
-  object-fit: cover;
-}
+
+
