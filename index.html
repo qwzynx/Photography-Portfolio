@@ -9,16 +9,26 @@
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="picturesgridding.css">
+    <link rel="stylesheet" href="contactme.css">
+    <link rel="stylesheet" href="navbar.css">
     
     <title>Porfolio</title>
-
+    
   </head>
   <body>
-    <div class="main_container">
+    <div class="overlay" id="overlay" onclick="off()">
+      <img src="" alt="" class="Oimg" id="Oimg">
+      <p class="Otext">CLICK ANYWHERE TO GO BACK</p>
+    </div>
+    <div class="main_container" id="home">
+      <div class="navbar">
+        <button  onclick="scrollToId('home')" class="b1"><span class="material-symbols-outlined m7">home</span></button>
+        <button onclick="scrollToId('contactme')" class="b2"><span class="material-symbols-outlined m8">contact_support</span></button>
+      </div>
       <h1 class="name">Mahan Ghaffarianmayouni</h1>
       <h1 class="prof">Photographer and Visual Artist</h1>
       <br>
-      <img src="pics/IMG_3731.jpg" alt="" class="m1pic">
+      <img onclick="openPhoto('pics/IMG_3731.jpg')" src="pics/IMG_3731.jpg" alt="" class="m1pic">
 
       <br>
       
@@ -36,47 +46,48 @@
       <br>
       <div class="pictures">
         
-        <img src="pics/IMG_0960-2.jpg" class="allpictures">
-        <img src="pics/IMG_1059.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_0202.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_0139.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_0970.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_1198-2.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_1083-2.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4395.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4401.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4413.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4418.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4453.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4532.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4536.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4567.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4597.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4731.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4923.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_0809.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_0988.jpg" alt="" class="allpictures">
-        <img src="pics/IMG_4464.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_0960.jpg')" src="pics/IMG_0960.jpg" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_1059.jpg')" src="pics/IMG_1059.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_0202.jpg')" src="pics/IMG_0202.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_0139.jpg')" src="pics/IMG_0139.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_0970.jpg')" src="pics/IMG_0970.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_1198-2.jpg')" src="pics/IMG_1198-2.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_1083-2.jpg')" src="pics/IMG_1083-2.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4395.jpg')" src="pics/IMG_4395.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4401.jpg')" src="pics/IMG_4401.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4413.jpg')" src="pics/IMG_4413.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4418.jpg')" src="pics/IMG_4418.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4453.jpg')" src="pics/IMG_4453.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4532.jpg')" src="pics/IMG_4532.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4536.jpg')" src="pics/IMG_4536.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4567.jpg')" src="pics/IMG_4567.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4597.jpg')" src="pics/IMG_4597.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4731.jpg')" src="pics/IMG_4731.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4923.jpg')" src="pics/IMG_4923.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_0809.jpg')" src="pics/IMG_0809.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_0988.jpg')" src="pics/IMG_0988.jpg" alt="" class="allpictures">
+        <img onclick="openPhoto('pics/IMG_4464.jpg')" src="pics/IMG_4464.jpg" alt="" class="allpictures">
 
       </div>
 
-      <div class="contactme">
+      <div class="contactme" id="contactme">
         <br>
         <h1 class="contacts">Contact Me</h1>
+        <a class="phonenum p1" href="tel:+16476797106"><span class="material-symbols-outlined m5">phone</span>+1 (647) 679-7106</a>
+        <p class="phonenum p2" onclick="webOpen('https://www.instagram.com/qwzynx/')"><span class="m5"><img src="instagram-logo-A807AD378B-seeklogo.com.png" alt="" class="instagram"></span>@Qwzynx</p>
+        <a class="phonenum p3" onclick="webOpen('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=mahan207gh@gmail.com')"><span class="material-symbols-outlined m5">email</span>mahan207gh@gmail.com</a>
       </div>
+      <br>
+      <br>
+
+      <p class="copy">
+        &copy; QWZYNX 2024</p>
+
     </div>
 
 
+    <img onclick="openPhoto('pics/IMG_3731.jpg')" src="pics/IMG_3731.jpg" alt="" class="mpic">
 
-      <img src="pics/IMG_3731.jpg" alt="" class="mpic">
-
-
-
-    
-
-
-    
-    
     <script src="main.js"></script>
   </body>
 </html>

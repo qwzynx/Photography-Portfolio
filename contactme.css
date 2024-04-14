@@ -1,0 +1,88 @@
+.contactme {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1.contacts {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 50px;
+  cursor: default;
+  user-select: none;
+}
+.phonenum {
+  font-family: var(--secondary-font);
+  font-size: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+  color: var(--secondary);
+  text-decoration: none;
+}
+.m5 {
+  margin-right: 6px;
+  font-size: 35px !important;
+}
+.instagram {
+  height: 33px;
+  display: flex;
+  filter: brightness(30);
+}
+
+.copy {
+  position: absolute;
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-family: var(--font);
+}
+.p1:hover {
+  color: var(--alt-color);
+}
+.p2:hover {
+  color: var(--alt-color);
+}
+.p3:hover {
+  color: var(--alt-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .instagram {
+    height: 25px;
+    display: flex;
+    filter: brightness(30);
+  }
+  h1.contacts {
+    font-size: 40px;
+  }
+  .copy {
+    font-size: 10px;
+  }
+  .m5 {
+    font-size: 30px !important;
+  }
+  .phonenum {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .instagram {
+    height: 25px;
+    display: flex;
+    filter: brightness(30);
+  }
+  .copy {
+    font-size: 10px;
+  }
+  .m5 {
+    font-size: 30px !important;
+  }
+  .phonenum {
+    font-size: 18px;
+  }
+}
