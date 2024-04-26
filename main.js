@@ -3,7 +3,7 @@ const Oimg = document.getElementById("Oimg");
 
 function scrollToId(section) {
   var scroll = document.getElementById(section);
-  scroll.scrollIntoView();
+  scroll.scrollIntoView({behavior: "smooth"});
 }
 function openPhoto(source) {
   overlay.style.display = "block";
